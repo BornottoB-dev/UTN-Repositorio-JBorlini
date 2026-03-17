@@ -1,15 +1,292 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTN</title>
+    <title>UTN Trenque Lauquén - Carreras Universitarias</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #2a5298;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #1e3c72;
+            text-align: center;
+        }
+
+        .bienvenida {
+            background-color: #f9f9f9;
+        }
+
+        .bienvenida p {
+            font-size: 1.1em;
+            text-align: center;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .carreras {
+            background-color: white;
+        }
+
+        .carreras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .carrera-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carrera-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-color: #2a5298;
+        }
+
+        .carrera-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #1e3c72;
+        }
+
+        .carrera-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .about {
+            background-color: #f9f9f9;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .about-content p {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Welcome to UTN</h1>
-    <h2>Hello world</h2>
+    <!-- Header -->
+    <header>
+        <h1>UTN Trenque Lauquén</h1>
+        <p>Universidad Tecnológica Nacional - Sede Trenque Lauquén</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#carreras">Carreras</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Bienvenida -->
+    <section id="inicio" class="bienvenida">
+        <div class="container">
+            <h2>Bienvenido a UTN Trenque Lauquén</h2>
+            <p>
+                La Universidad Tecnológica Nacional (UTN) es una institución de educación superior,
+                estatal y autárquica, creada por Ley N° 14.855 del 20 de mayo de 1959, con presencia
+                en todo el territorio nacional. En Trenque Lauquén, ofrecemos carreras de excelencia
+                académica diseñadas para formar profesionales competitivos en un mundo globalizado.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección Carreras -->
+    <section id="carreras" class="carreras">
+        <div class="container">
+            <h2>Nuestras Carreras</h2>
+            <div class="carreras-grid">
+                <!-- Ingeniería en Sistemas -->
+                <div class="carrera-card">
+                    <h3>📱 Ingeniería en Sistemas</h3>
+                    <p>
+                        Formamos profesionales capacitados en el análisis, diseño, desarrollo e
+                        implementación de sistemas de información. Especialización en software,
+                        bases de datos y tecnologías de la información.
+                    </p>
+                </div>
+
+                <!-- Ingeniería Industrial -->
+                <div class="carrera-card">
+                    <h3>🏭 Ingeniería Industrial</h3>
+                    <p>
+                        Preparamos ingenieros para optimizar procesos, mejorar la productividad
+                        y gestionar recursos empresariales. Especialización en calidad, logística
+                        y gestión operativa.
+                    </p>
+                </div>
+
+                <!-- Licenciatura en Administración Rural -->
+                <div class="carrera-card">
+                    <h3>🌾 Licenciatura en Administración Rural</h3>
+                    <p>
+                        Formamos profesionales especializados en gestión de empresas agropecuarias.
+                        Énfasis en administración, economía agraria, sostenibilidad y negocios rurales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Información -->
+    <section id="informacion" class="about">
+        <div class="container">
+            <h2>Sobre la UTN Trenque Lauquén</h2>
+            <div class="about-content">
+                <div>
+                    <h3>Excelencia Académica</h3>
+                    <p>
+                        Nuestras carreras están diseñadas con planes de estudio actualizados que
+                        responden a las demandas del mercado laboral actual y futuro. Contamos con
+                        docentes especializados y recursos de última generación.
+                    </p>
+                </div>
+                <div>
+                    <h3>Oportunidades de Empleo</h3>
+                    <p>
+                        Los egresados de nuestras carreras tienen sólidas oportunidades laborales
+                        en empresas de la región y el país. Ofrecemos prácticas profesionales,
+                        pasantías y bolsa de trabajo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <p><strong>UTN Trenque Lauquén</strong></p>
+        <p>Universidad Tecnológica Nacional</p>
+        <p>Trenque Lauquén, Buenos Aires, Argentina</p>
+        <p>📧 contacto@utn.edu.ar | 📞 Tel: (02343) XXX-XXXX</p>
+        <p>&copy; 2024 UTN Trenque Lauquén. Todos los derechos reservados.</p>
+    </footer>
 </body>
 
 </html>
